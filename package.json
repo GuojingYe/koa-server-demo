@@ -1,0 +1,24 @@
+{
+  "name": "koa-demo",
+  "version": "1.0.0",
+  "description": "koa study",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "koa"
+  ],
+  "author": "ygjing",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-router": "^7.4.0",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.10"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
+  }
+}
