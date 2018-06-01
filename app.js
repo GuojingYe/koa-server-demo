@@ -1,3 +1,8 @@
+const config_default = require('./config/config_default');
+const config_prod = require('./config/config_prod');
+
+global.config = process.env.NODE_ENV === 'production' ? config_prod : config_default;
+
 const Koa = require('koa');
 const bodyParser = require('koa-bodyparser');
 
@@ -6,6 +11,8 @@ const errorHandler = require('./app/middleware/error_handler');
 const sequelize = require('./app/util/database');
 
 const app = new Koa();
+
+console.log(global.config);
 
 app.use(errorHandler);
 
