@@ -5,6 +5,7 @@ koa前后端分离后端项目示例
 
 * 路由 koa-router
 * 请求数据格式化 koa-bodyparser
+* 请求参数验证 koa-parameter
 
 ## 第三方模块
 
