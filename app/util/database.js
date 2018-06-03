@@ -1,6 +1,9 @@
 const Sequelize = require('sequelize');
-const sequelize  = new Sequelize('koa_demo', 'root', '123456', {
-  host: 'localhost',
+
+const mysql = global.config.mysql;
+
+const sequelize  = new Sequelize(mysql.name, mysql.user, mysql.password, {
+  host: mysql.host,
   dialect: 'mysql',
 
   pool: {

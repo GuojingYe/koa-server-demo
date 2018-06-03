@@ -5,6 +5,7 @@ global.config = process.env.NODE_ENV === 'production' ? config_prod : config_def
 
 const Koa = require('koa');
 const bodyParser = require('koa-bodyparser');
+const parameter = require('koa-parameter');
 
 const router = require('./app/router');
 const errorHandler = require('./app/middleware/error_handler');
@@ -21,6 +22,8 @@ app.use(bodyParser({
     ctx.throw(422, 'body parse error');
   }
 }));
+
+parameter(app);
 
 app.use(router.routes()).use(router.allowedMethods());
 
